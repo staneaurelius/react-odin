@@ -1,4 +1,17 @@
+:root {
+  --gray-bg: rgba(229, 229, 234, 0.7);
+  --pure-white: rgb(255, 255, 255);
+  --black: rgb(28, 28, 36);
+}
+
 html {
+  color: var(--black);
+  background-color: var(--gray-bg);
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-size: 16px;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
 }
