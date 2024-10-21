@@ -1,3 +1,5 @@
+import "../styles/inputGroup.css";
+
 function InputGroup({ type, label, name, value, onChange }) {
     return (
         <label>

@@ -1,0 +1,62 @@
+.education {
+  background-color: var(--pure-white);
+  padding: 32px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+  border: none;
+}
+
+.education header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.education svg {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.25s ease-in-out;
+}
+
+.education h2 {
+  margin: 0;
+}
+
+.date-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.date-group > label {
+  width: 100%;
+}
+
+.education-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation-name: expand;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  transform-origin: top;
+}
+
+.hidden {
+  display: none;
+}
+
+.education svg.open {
+  transform: rotate(180deg);
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
