@@ -2,6 +2,7 @@ import { useState } from "react";
 import dummyData from "./dummyData";
 import PersonalDetails from "./components/personalDetails";
 import Education from "./components/education";
+import Resume from "./components/resume";
 
 function App () {
     // States
@@ -27,18 +28,7 @@ function App () {
                 <PersonalDetails data={personalDetail} onChange={handlePersonalDetail} />
                 <Education dataList={education} updaterFn={editEducation} />
             </form>
-            <div>
-                <h2>Personal Info</h2>
-                <p>Name: {personalDetail.fullName}</p>
-                <p>Email: {personalDetail.email}</p>
-                <p>Contact: {personalDetail.contact}</p>
-                <p>Address: {personalDetail.address}</p>
-
-                <h2>Education</h2>
-                <p>School: {education[0].school}</p>
-                <p>Degree: {education[0].degree}</p>
-                <p>Grade: {education[0].grade}</p>
-            </div>
+            <Resume personal={personalDetail} education={education} />
         </>
     )
 };

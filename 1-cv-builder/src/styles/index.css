@@ -4,6 +4,9 @@
   --black: rgb(28, 28, 36);
   --red: rgb(255, 59, 48);
   --green: rgb(0, 125, 27);
+  --dark-resume: #2B564E;
+  --medium-resume: #477F78;
+  --light-resume: #E2F4F3;
 }
 
 html {
@@ -16,6 +19,7 @@ html {
 #root {
   display: grid;
   grid-template-columns: 2fr 3fr;
+  column-gap: 32px;
 }
 
 body {
