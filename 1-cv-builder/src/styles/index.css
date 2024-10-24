@@ -2,6 +2,8 @@
   --gray-bg: rgba(229, 229, 234, 0.7);
   --pure-white: rgb(255, 255, 255);
   --black: rgb(28, 28, 36);
+  --red: rgb(255, 59, 48);
+  --green: rgb(0, 125, 27);
 }
 
 html {

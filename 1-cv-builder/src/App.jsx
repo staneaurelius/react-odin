@@ -11,9 +11,13 @@ function App () {
         };
 
     const [education, setEducation] = useState(dummyData.education),
-        handleEducation = (e) => {
-            console.log(e.target.value === '');
-            setEducation({ ...education, [e.target.name] : e.target.value });
+        editEducation = (arrayId, updatedData) => {
+            const modifiedIndex = education.findIndex((detail) => detail.id === arrayId),
+                updatedArray = [...education];
+            
+            updatedArray[modifiedIndex] = updatedData;
+            console.log(updatedArray);
+            setEducation(updatedArray);
         };
 
     // App
@@ -21,13 +25,19 @@ function App () {
         <>
             <form action="" method="post">
                 <PersonalDetails data={personalDetail} onChange={handlePersonalDetail} />
-                <Education data={education} onChange={handleEducation} />
+                <Education dataList={education} updaterFn={editEducation} />
             </form>
             <div>
+                <h2>Personal Info</h2>
                 <p>Name: {personalDetail.fullName}</p>
                 <p>Email: {personalDetail.email}</p>
                 <p>Contact: {personalDetail.contact}</p>
                 <p>Address: {personalDetail.address}</p>
+
+                <h2>Education</h2>
+                <p>School: {education[0].school}</p>
+                <p>Degree: {education[0].degree}</p>
+                <p>Grade: {education[0].grade}</p>
             </div>
         </>
     )

@@ -6,13 +6,25 @@ const dummyData = {
         address : 'Jakarta, Indonesia'
     },
 
-    education : {
-        school : 'React University',
-        degree : 'Bachelor of Computer Science',
-        grade : '3.99',
-        startDate : '2018-08-01',
-        endDate : '2022-10-01'
-    }
+    education : [
+        {
+            id : 'unique-id-1',
+            school : 'React University',
+            degree : 'Bachelor of Computer Science',
+            grade : '4.00',
+            startDate : '08/2018',
+            endDate : '10/2022'
+        },
+
+        {
+            id : 'unique-id-2',
+            school : 'Code Bootcamp',
+            degree : 'Full Stack Developer',
+            grade : '3.50',
+            startDate : '08/2018',
+            endDate : '10/2022'
+        },
+    ]
 };
 
 export default dummyData;
