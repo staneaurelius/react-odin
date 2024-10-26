@@ -58,8 +58,8 @@ const Experience = function({ dataList, updaterFn, deleteFn, insertFn }) {
         id : `unique-exp-${dataList.length + 1}`,
         title : 'Position',
         company : 'Company',
-        startDate : '01 / 2020',
-        endDate : '01 /2024',
+        startDate : 'Jan 2020',
+        endDate : 'Jan 2024',
         description : 'I do a lot of things in this company!'
     };
     

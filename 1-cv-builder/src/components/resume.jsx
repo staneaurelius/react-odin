@@ -4,9 +4,9 @@ import { MailSvg, PhoneSvg, AddressSvg } from './icons';
 const EducationItem = function({ eduDetail }) {
     return (
         <div className="education-item">
-            <b><p>{eduDetail.startDate} - {eduDetail.endDate}</p></b>
-            <b><p>{eduDetail.school}</p></b>
-            <p>{eduDetail.degree}</p>
+            <b><p style={{ marginBottom : "4px" }}>{eduDetail.startDate} - {eduDetail.endDate}</p></b>
+            <b><p style={{ marginBottom : "8px" }}>{eduDetail.school}</p></b>
+            <p style={{ marginBottom : "4px" }}>{eduDetail.degree}</p>
             <p>Grade: {eduDetail.grade}</p>
         </div>
     );
@@ -40,7 +40,17 @@ const ContactItem = function({ mail, tel, address }) {
     );
 };
 
-const Resume = function({ personal, education }) {
+const ExperienceItem = function({ expDetail }) {
+    return (
+        <div className="experience-item">
+            <b><p style={{ marginBottom : "4px" }}>{expDetail.startDate} - {expDetail.endDate}</p></b>
+            <b><p style={{ marginBottom : "8px" }}>{expDetail.title} - {expDetail.company}</p></b>
+            <p>{expDetail.description}</p>
+        </div>
+    );
+};
+
+const Resume = function({ personal, education, experience }) {
     return (
         <section className="resume">
             <header>
@@ -60,7 +70,8 @@ const Resume = function({ personal, education }) {
                 </section>
             </div>
             <section className="resume-experience">
-
+                <h2>Work Experience</h2>
+                { experience.map(detail => <ExperienceItem expDetail={detail} key={detail.id} /> )}
             </section>
         </section>
     );

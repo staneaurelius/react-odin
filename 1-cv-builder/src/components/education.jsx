@@ -59,8 +59,8 @@ const Education = function({ dataList, updaterFn, deleteFn, insertFn }) {
         school : 'My University',
         degree : 'My Degree',
         grade : '4.00',
-        startDate : '01 / 2020',
-        endDate : '01 /2024'
+        startDate : 'Jan 2020',
+        endDate : 'Jan 2024'
     };
     
     const handleInsertion = () => {

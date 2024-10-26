@@ -1,8 +1,15 @@
-# React + Vite
+# Resume Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is part of **The Odin Project's** React course of the Full Stack JavaScript path. Completing this project demonstrates an understanding and proficiency in using React to create a *Resume Builder* website which lets user input a set of data and generates a resume based on that information. This project requires an understanding of the following React concepts:
 
-Currently, two official plugins are available:
+- *Components* for creating reusable components of a web-page;
+- *Passing data* between components
+- *Rendering & State* to make the components dynamic
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Result
+
+![Resume Builder Website Preview](static/preview.png)
+
+## Attribution
+
+- Every icon used in this project was obtained from [Google Fonts](https://fonts.google.com/icons)

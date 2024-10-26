@@ -13,8 +13,8 @@ const dummyData = {
             school : 'React University',
             degree : 'Bachelor of Computer Science',
             grade : '4.00',
-            startDate : 'Aug 2018',
-            endDate : 'Oct 2022'
+            startDate : 'Aug 2014',
+            endDate : 'Oct 2017'
         },
 
         {
@@ -22,8 +22,8 @@ const dummyData = {
             school : 'Code Bootcamp',
             degree : 'Full Stack Developer',
             grade : '3.50',
-            startDate : 'Mar 2019',
-            endDate : 'Mar 2020'
+            startDate : 'Sep 2017',
+            endDate : 'Mar 2018'
         }
     ],
 
