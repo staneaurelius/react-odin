@@ -3,6 +3,7 @@ import dummyData from "./dummyData";
 import PersonalDetails from "./components/personalDetails";
 import Education from "./components/education";
 import Resume from "./components/resume";
+import Experience from "./components/experience";
 
 function App () {
     // States
@@ -30,14 +31,34 @@ function App () {
             setEducation([...education, newData]);
         };
 
+    const [experience, setExperience] = useState(dummyData.experience),
+        editExperience = (arrayId, updatedData) => {
+            const modifiedIndex = experience.findIndex((detail) => detail.id === arrayId),
+                updatedArray = [...experience];
+            
+            updatedArray[modifiedIndex] = updatedData;
+            setExperience(updatedArray);
+        },
+        deleteExperience = (arrayId) => {
+            const modifiedIndex = experience.findIndex((detail) => detail.id === arrayId),
+                updatedArray = [...experience];
+
+            updatedArray.splice(modifiedIndex, 1);
+            setExperience(updatedArray);
+        },
+        insertExperience = (newData) => {
+            setExperience([...experience, newData]);
+        };
+
     // App
     return (
         <>
             <form action="" method="post">
                 <PersonalDetails data={personalDetail} onChange={handlePersonalDetail} />
                 <Education dataList={education} updaterFn={editEducation} deleteFn={deleteEducation} insertFn={insertEducation} />
+                <Experience dataList={experience} updaterFn={editExperience} deleteFn={deleteExperience} insertFn={insertExperience} />
             </form>
-            <Resume personal={personalDetail} education={education} />
+            <Resume personal={personalDetail} education={education} experience={experience} />
         </>
     )
 };

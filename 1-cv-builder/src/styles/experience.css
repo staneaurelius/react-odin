@@ -1,0 +1,67 @@
+.experience {
+  padding: 0;
+  background-color: var(--pure-white);
+  border-radius: 16px;
+  border: none;
+  box-shadow: 2px 2px 12px 0 var(--shadow);
+}
+
+/* Header */
+.experience > header {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.experience > header:hover {
+  background-color: var(--pure-white);
+  border-radius: 16px 16px 0 0;
+  filter: brightness(0.9);
+}
+
+.experience > svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.experience h2 {
+  flex: 1;
+  margin: 0;
+}
+
+/* Experience groups */
+.experience-group {
+  border-top: 4px solid var(--gray-bg);
+  padding: 24px 32px;
+}
+
+.experience-group:last-of-type {
+  border-bottom: 4px solid var(--gray-bg);
+}
+
+.experience-group header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-group h3 {
+  margin: 0;
+}
+
+.experience-group-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Fieldset inputs */
+.experience-detail {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: expand 300ms ease-out;
+}

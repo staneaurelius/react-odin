@@ -9,12 +9,12 @@ const dummyData = {
 
     education : [
         {
-            id : 'unique-id-1',
+            id : 'unique-edu-1',
             school : 'React University',
             degree : 'Bachelor of Computer Science',
             grade : '4.00',
-            startDate : '08/2018',
-            endDate : '10/2022'
+            startDate : 'Aug 2018',
+            endDate : 'Oct 2022'
         },
 
         {
@@ -22,9 +22,29 @@ const dummyData = {
             school : 'Code Bootcamp',
             degree : 'Full Stack Developer',
             grade : '3.50',
-            startDate : '08/2018',
-            endDate : '10/2022'
+            startDate : 'Mar 2019',
+            endDate : 'Mar 2020'
+        }
+    ],
+
+    experience : [
+        {
+            id : 'unique-exp-1',
+            title : 'Software Engineer',
+            company : 'TechSolutions Inc.',
+            startDate : 'Jan 2020',
+            endDate : 'Present',
+            description : 'Developed and executed digital marketing strategies that increased website traffic by 40% over one year. Collaborated with cross-functional teams to design promotional campaigns, resulting in a 15% increase in customer engagement.'
         },
+
+        {
+            id : 'unique-exp-2',
+            title : 'AI Specialist',
+            company : 'Innovatech Solutions',
+            startDate : 'May 2018',
+            endDate : 'Dec 2019',
+            description: 'Built and maintained web applications, optimizing functionality and performance to improve user experience. Worked closely with designers and product managers to deliver new features, reducing load times by 20% and increasing overall application efficiency.'
+        }
     ]
 };
 

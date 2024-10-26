@@ -5,7 +5,7 @@ function InputGroup({ type, label, name, value, onChange }) {
         <label>
             {label}
             { type === 'textarea'
-                ? <textarea name={name} id={name} rows="6" onChange={onChange}>{value}</textarea>
+                ? <textarea name={name} id={name} rows="6" onChange={onChange} value={value}></textarea>
                 : <input type={type} name={name} value={value} onChange={onChange} />
             }
         </label>
