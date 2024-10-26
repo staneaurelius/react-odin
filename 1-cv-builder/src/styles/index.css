@@ -1,12 +1,13 @@
 :root {
   --gray-bg: rgba(229, 229, 234, 0.7);
+  --shadow: rgb(174, 174, 178);
   --pure-white: rgb(255, 255, 255);
   --black: rgb(28, 28, 36);
   --red: rgb(255, 59, 48);
   --green: rgb(0, 125, 27);
-  --dark-resume: #2B564E;
-  --medium-resume: #477F78;
-  --light-resume: #E2F4F3;
+  --dark-resume: #2A4A75;
+  --medium-resume: #4F84B9;
+  --light-resume: #E3F0FF;
 }
 
 html {

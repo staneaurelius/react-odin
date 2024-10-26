@@ -3,7 +3,7 @@ import InputGroup from "./inputGroup";
 import { EducationSvg, ArrowSvg, EditSvg } from './icons';
 import "../styles/education.css";
 
-const EducationGroup = function({ data, onClick }) {
+const EducationGroup = function({ data, onEdit, onDelete }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const [internalData, setInternalData] = useState(data),
@@ -12,7 +12,10 @@ const EducationGroup = function({ data, onClick }) {
         };
 
     const confirmBtnHandler = function() {
-        onClick(data.id, internalData);
+        onEdit(data.id, internalData);
+    },
+        deleteBtnHandler = function() {
+            onDelete(data.id);
     };
 
     return (
@@ -34,7 +37,7 @@ const EducationGroup = function({ data, onClick }) {
                         </div>
                         <InputGroup type="text" label="Grade" name="grade" value={internalData.grade} onChange={handleDataChange} />
                         <div className="edit-buttons">
-                            <button type="button" className="delete-btn">Delete</button>
+                            <button type="button" className="delete-btn" onClick={deleteBtnHandler}>Delete</button>
                             <button type="button" className="confirm-btn" onClick={confirmBtnHandler}>Confirm</button>
                         </div>
                     </div>
@@ -44,12 +47,25 @@ const EducationGroup = function({ data, onClick }) {
     );
 };
 
-const Education = function({ dataList, updaterFn }) {
+const Education = function({ dataList, updaterFn, deleteFn, insertFn }) {
     const [isOpen, setIsOpen] = useState(false),
         handleIsOpen = (e) => {
             e.preventDefault();
             setIsOpen(!isOpen);
         };
+    
+    const placeholderData = {
+        id : `unique-id-${dataList.length + 1}`,
+        school : 'My University',
+        degree : 'My Degree',
+        grade : '4.00',
+        startDate : '01 / 2020',
+        endDate : '01 /2024'
+    };
+    
+    const handleInsertion = () => {
+        insertFn(placeholderData);
+    };
 
     return (
         <fieldset className="education">
@@ -64,10 +80,10 @@ const Education = function({ dataList, updaterFn }) {
                         {
                             dataList.map(data => {
                                 const uniqueKey = data.school.replace(' ', '-');
-                                return <EducationGroup data={data} onClick={updaterFn} key={uniqueKey} />
+                                return <EducationGroup data={data} onEdit={updaterFn} onDelete={deleteFn} key={uniqueKey} />
                             })
                         }
-                        <button type="button">+ New Entry</button>
+                        <button type="button" onClick={handleInsertion}>+ New Entry</button>
                     </div>
                 )
             }

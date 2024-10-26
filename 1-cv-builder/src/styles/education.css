@@ -3,6 +3,7 @@
   background-color: var(--pure-white);
   border-radius: 16px;
   border: none;
+  box-shadow: 2px 2px 12px 0 var(--shadow);
 }
 
 .animated {

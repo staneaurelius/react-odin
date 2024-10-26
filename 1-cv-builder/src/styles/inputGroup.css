@@ -5,9 +5,13 @@ label {
   gap: 4px;
 }
 
-input {
+input, textarea {
   background-color: var(--gray-bg);
   border-radius: 8px;
   border: none;
   padding: 8px 16px;
+}
+
+textarea {
+  resize: vertical;
 }

@@ -1,9 +1,11 @@
 .resume {
+  height: fit-content;
   font-weight: 350;
   background-color: var(--pure-white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr 3fr;
+  box-shadow: 8px 8px 16px 2px var(--shadow);
 }
 
 .resume h1 {

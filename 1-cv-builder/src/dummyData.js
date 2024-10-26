@@ -3,7 +3,8 @@ const dummyData = {
         fullName : 'Jane Doe',
         email : 'janedoe.is.unreal@example.com',
         contact : '123-456-7890',
-        address : 'Jakarta, Indonesia'
+        address : 'Jakarta, Indonesia',
+        profile : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam minus, omnis iure repudiandae, iusto sapiente repellat voluptas porro saepe alias odio quas, eos a suscipit modi natus corporis? Rem nisi consequatur quia facilis sit quos corrupti eligendi hic ad.'
     },
 
     education : [

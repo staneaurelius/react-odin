@@ -17,8 +17,17 @@ function App () {
                 updatedArray = [...education];
             
             updatedArray[modifiedIndex] = updatedData;
-            console.log(updatedArray);
             setEducation(updatedArray);
+        },
+        deleteEducation = (arrayId) => {
+            const modifiedIndex = education.findIndex((detail) => detail.id === arrayId),
+                updatedArray = [...education];
+
+            updatedArray.splice(modifiedIndex, 1);
+            setEducation(updatedArray);
+        },
+        insertEducation = (newData) => {
+            setEducation([...education, newData]);
         };
 
     // App
@@ -26,7 +35,7 @@ function App () {
         <>
             <form action="" method="post">
                 <PersonalDetails data={personalDetail} onChange={handlePersonalDetail} />
-                <Education dataList={education} updaterFn={editEducation} />
+                <Education dataList={education} updaterFn={editEducation} deleteFn={deleteEducation} insertFn={insertEducation} />
             </form>
             <Resume personal={personalDetail} education={education} />
         </>

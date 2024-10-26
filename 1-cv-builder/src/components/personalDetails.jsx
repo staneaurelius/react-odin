@@ -9,6 +9,7 @@ function PersonalDetails({ data, onChange }) {
             <InputGroup type="email" label="Email" name="email" value={data.email} onChange={onChange} />
             <InputGroup type="tel" label="Contact" name="contact" value={data.contact} onChange={onChange} />
             <InputGroup type="text" label="Address" name="address" value={data.address} onChange={onChange} />
+            <InputGroup type="textarea" label="Profile" name="profile" value={data.profile} onChange={onChange} />
         </fieldset>
     );
 };
