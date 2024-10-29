@@ -1,9 +1,9 @@
 :root {
   font-family: "Poppins", Helvetica, sans-serif;
   font-size: 16px;
-}
-
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+  --darker-blue: #192653;
+  --dark-blue: #003A70;
+  --light-blue: #0066B3;
+  --yellow: #FFCC00;
+  --red: #FF1B1B;
 }

@@ -1,0 +1,6 @@
+.card-grid {
+  padding: 32px 64px 64px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: 32px;
+}

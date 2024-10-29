@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 32px;
+  margin-bottom: 192px;
+  background-color: var(--dark-blue);
+}
+
+header img {
+  width: 400px;
+}
+
+.divider {
+  width: 100%;
+  position: absolute;
+  color: var(--dark-blue);
+  top: 99%;
+}
