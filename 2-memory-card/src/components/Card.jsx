@@ -1,32 +1,20 @@
-import { useState, useEffect } from "react";
 import '../style/Card.css';
 
-function Card({ pokemonId }) {
-    const url = 'https://pokeapi.co/api/v2/pokemon',
-        [pokemon, setPokemon] = useState(null);
-
-    useEffect(() => {
-        fetch(`${url}/${pokemonId}`, { method : 'GET' })
-            .then(response => response.json())
-            .then(data => {
-                setPokemon({
-                    name : data.species.name,
-                    imageURL : data.sprites.other['official-artwork']['front_default']
-                })
-            })
-    }, [pokemonId]);
-
+function PokemonCard({ name, imgURL, onClick }) {
     return (
-        <div className="card">
-            {pokemon
-                ? <>
-                    <img className='pokemon-img' src={pokemon.imageURL} alt={`${pokemon.name} image`} width="200px" />
-                    <p>{pokemon.name}</p>
-                </>
-                : <img className='placeholder-card' src={'/pokemon-card.png'} alt='pokemon card' width="200px" />
-            }
+        <div className='card active in-animation' data-pokemon={name} onClick={onClick}>
+            <img className='pokemon-img' src={imgURL} alt={`${name} image`} width="200px" />
+            <p>{name}</p>
         </div>
     );
 };
 
-export default Card;
+function PlaceholderCard() {
+    return (
+        <div className="card">
+            <img className='placeholder-img' src='/pokemon-card.png' alt='Placeholder image' width="200px" />
+        </div>
+    );
+};
+
+export { PokemonCard, PlaceholderCard };

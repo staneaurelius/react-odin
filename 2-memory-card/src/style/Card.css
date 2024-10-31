@@ -1,9 +1,18 @@
 .card {
+  aspect-ratio: 5 / 7;
   background-color: var(--light-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 16px;
+}
+
+.active {
+  cursor: pointer;
+}
+
+.active:hover {
+  box-shadow: 0 0 12px 2px var(--red);
 }
 
 .pokemon-img {
@@ -14,17 +23,37 @@
 }
 
 .card > p {
-  padding: 8px 0;
+  margin: auto;
   color: var(--yellow);
   font-size: 1.25rem;
   font-weight: 550;
   text-transform: capitalize;
 }
 
-.placeholder-card {
+.placeholder-img {
   box-sizing: border-box;
   width: 100%;
+  height: 100%;
   background-color: var(--darker-blue);
   padding: 16px;
   border-radius: 16px;
+}
+
+/* Animation */
+.in-animation {
+  animation-name: rotate-in;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate-in {
+  0% {
+    opacity: 0.3;
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
 }
