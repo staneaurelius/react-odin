@@ -13,7 +13,7 @@ function generatePlaceholder(count) {
     return placeholderArray;
 };
 
-function CardGrid({ pokeList }) {
+function CardGrid({ pokeList, flipTimeout, scoreFn }) {
 
     const url = 'https://pokeapi.co/api/v2/pokemon',
         [pokemonData, setPokemonData] = useState([]);
@@ -26,9 +26,14 @@ function CardGrid({ pokeList }) {
                 updatedData = [...pokemonData],
                 targetIdx = updatedData.findIndex((element) => element.name === clickedCard);
 
-            updatedData[targetIdx].isClicked = true;
-            setPokemonData( shuffleArray(updatedData) );
-            setTimeout(() => setIsShown(true), 1500);
+            if (updatedData[targetIdx].isClicked) {
+                scoreFn(false);
+            } else {
+                scoreFn(true);
+                updatedData[targetIdx].isClicked = true;
+                setPokemonData( shuffleArray(updatedData) );
+                setTimeout(() => setIsShown(true), flipTimeout);
+            };
         };
 
     useEffect(() => {
@@ -51,7 +56,7 @@ function CardGrid({ pokeList }) {
             });
             
             Promise.all(allData).then(data => setPokemonData(data));
-            setTimeout(() => setIsShown(true), 1500);
+            setTimeout(() => setIsShown(true), flipTimeout);
         };
 
         return () => { ignore = true };

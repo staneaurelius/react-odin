@@ -1,0 +1,24 @@
+.scoreboard {
+  padding-bottom: 32px;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.score p {
+  color: var(--dark-blue);
+  font-size: 1.15rem;
+  padding: 16px 24px;
+  border: 2px solid var(--yellow);
+  border-radius: 16px;
+}
+
+.scoreboard > p {
+  color: var(--dark-blue);
+  text-align: center;
+  font-style: italic;
+}
