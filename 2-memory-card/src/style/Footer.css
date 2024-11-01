@@ -1,0 +1,16 @@
+footer {
+  background-color: var(--light-blue);
+  text-align: center;
+  padding: 16px 0;
+}
+
+footer p {
+  color: var(--yellow);
+  margin: 0;
+}
+
+footer a {
+  margin-left: 0.4rem;
+  color: var(--yellow);
+  text-decoration: none;
+}

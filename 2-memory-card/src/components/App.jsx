@@ -4,6 +4,7 @@ import Header from './Header';
 import ScoreBoard from './Score';
 import CardGrid from './CardGrid';
 import { generateRandomCards, shuffleArray } from './utils';
+import Footer from './Footer';
 
 function App({ cardCount }) {
     const [cardList, setCardList] = useState(
@@ -30,6 +31,7 @@ function App({ cardCount }) {
             <Header />
             <ScoreBoard scores={scores} />
             <CardGrid pokeList={cardList} flipTimeout={1000} scoreFn={handleScores} />
+            <Footer />
         </>
     );
 };
